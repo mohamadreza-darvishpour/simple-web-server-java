@@ -1,1 +1,68 @@
-start the project. 
+start learning java. 
+
+
+#first define package with 'package 
+package my package.one.tw..... 
+
+#after package import classes 
+import java.utils.scanner 
+
+
+
+
+//private  , public , default 
+public class must have the same name as  file . 
+private class just should in another method in the class that  
+choose access types of members or other method . 
+private member just got access to that class is in . 
+
+
+
+error when 2 class with the same public access in one file . 
+:: first.java:3: error: class newClass is public, should be declared in a file named newClass.java
+public class newClass{
+       ^
+
+
+if a method in private access not could be used from another class . 
+
+
+class couldn't be private but methods and variables could . 
+
+
+
+*********        important compiling more related file . ***************** 
+when we have more than one package related each other we should compile them with 
+"-d " command to not got error in java.   
+its important because don't : java couldn't find the packs. 
+for example  with this path below : 
+
+.
+├── dir1
+│   └── fil_dir
+│       └── another.java
+├── dir2
+    └── lil_dir
+        └── first.java
+
+// we should run command in this way to do.  where we are in the parent of both 'dir1' and 'dir2'
+" javac -d . dir1\fil_dir\another.java dir2\lil_dir\first.java " 
+
+after that when we need to run the code we should use another way to run . 
+we should run 'java' run command  in shell where we compile all file . 
+then the specific command to run it is : 
+" java   dir2.lil_dir.first "    
+and its run successfully. 
+
+***
+so for this if wrong  we got the error below : 
+'''
+C:\Users\beta\Documents\web_server_java\web_server\learn_java\zerr\dir2\lil_dir>java first.class
+Error: Could not find or load main class first.class
+Caused by: java.lang.ClassNotFoundException: first.class
+'''
+
+
+
+
+
